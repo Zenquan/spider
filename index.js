@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const path = require('path');
 const KoaBody = require('koa-body');
-const  KoaStatic = require('koa-static');
+const KoaStatic = require('koa-static');
 const config = require('./constant/config');
 const routing = require('./routes/index');
 
