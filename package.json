@@ -21,7 +21,8 @@
     "serve": "pm2 start index.js",
     "dev": "nodemon index",
     "staticServer": "pm2 start ./service/staticServer.js",
-    "emoji": "node ./service/emoji"
+    "emoji": "node ./service/emoji",
+    "movie": "node ./service/movie"
   },
   "keywords": [],
   "author": "",
