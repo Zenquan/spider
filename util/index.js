@@ -1,8 +1,12 @@
 const request = require("request");
-const fs = require("fs");
-const path = require('path');
+const fs = require( "fs");
+const path = require( 'path');
 
-const downloadImage = (src, dest, callback) => {
+const downloadImage = (
+    src, 
+    dest, 
+    callback
+  ) => {
   request.head(src, (err, res, body) => {
     if (err) {
       console.log(err);
@@ -19,12 +23,12 @@ const downloadImage = (src, dest, callback) => {
 
 const resolve = (pathname) => {
   return path.join(__dirname, '..', pathname);
-}
+};
 
-const getSuffix = str => str.slice(str.lastIndexOf("."));
+const getSuffix = (str) => str.slice(str.lastIndexOf("."));
 
 module.exports = {
   downloadImage,
   getSuffix,
   resolve
-}
+};

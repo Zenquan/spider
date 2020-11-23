@@ -1,10 +1,8 @@
-import { IPAdress } from '../util/os'
+const { IPAdress } = require('../util/os'); 
 
-const config = {
+module.exports = {
   host: `${IPAdress}:4000`,
   staticPath: '/public',
   APIPORT: 4000,
   STATICPORT: 5000
-}
-
-export default config;
+};

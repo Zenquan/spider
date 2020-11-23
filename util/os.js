@@ -10,6 +10,6 @@ for (var devName in interfaces) {
   }
 }
 
-export {
+module.exports = {
   IPAdress
 };

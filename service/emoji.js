@@ -1,9 +1,12 @@
-const child_process = require('child_process');
-const async = require("async");
-const path = require('path');
-const { downloadImage, resolve } = require('../util/index');
-const { staticPath } = require('../constant/config');
-const { curl, baseurl } = require('../constant/curl/emoji')
+const child_process = require( 'child_process');
+const async = require( "async");
+const path = require( 'path');
+const { downloadImage, resolve } = require( '../util/index');
+const config = require( '../constant/config');
+const emoji = require( '../constant/curl/emoji');
+
+const { staticPath  } = config;
+const { curl, baseurl } = emoji;
 
 const __main__ = () => {
   let result = []
@@ -27,7 +30,7 @@ const __main__ = () => {
         callback && callback(null, item);
       }, 100);
     });
-  })
-}
+  });
+};
 
-__main__()
+__main__();

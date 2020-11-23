@@ -1,11 +1,12 @@
-import Koa from "koa";
+const Koa = require('koa');
 const path = require('path');
 const KoaBody = require('koa-body');
-const KoaStatic = require('koa-static');
-const { staticPath, APIPORT } = require('./constant/config');
-const routing = require('./routes/index')
+const  KoaStatic = require('koa-static');
+const config = require('./constant/config');
+const routing = require('./routes/index');
 
 const app = new Koa();
+const { staticPath, APIPORT } = config;
 
 app.use(KoaBody({
   multipart: true,
