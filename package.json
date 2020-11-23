@@ -13,8 +13,6 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "@types/koa": "^2.11.6",
-    "@types/node": "^14.14.9",
     "nodemon": "^2.0.6",
     "pm2": "^4.5.0",
     "serve": "^11.3.2",
