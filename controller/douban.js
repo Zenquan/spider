@@ -1,9 +1,9 @@
 const fs = require('fs');
-const { resolve } = require('../util/index');
+const { resolve } = require('../util');
 
-class MovieCtl {
-  index (ctx){
-    const movie = fs.readFileSync(resolve('/public/movie/movie.txt'));
+class DoubanCtl {
+  movie (ctx){
+    const movie = fs.readFileSync(resolve('/public/douban/movie.txt'));
     const tmpMovie = JSON.parse(movie);
     ctx.status = 200;
     ctx.body = {
@@ -14,4 +14,4 @@ class MovieCtl {
   }
 };
 
-module.exports = new MovieCtl();
+module.exports = new DoubanCtl();

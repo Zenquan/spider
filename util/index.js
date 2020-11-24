@@ -1,6 +1,7 @@
 const request = require("request");
 const fs = require( "fs");
 const path = require( 'path');
+const KoaRouter = require('koa-router');
 
 const downloadImage = (
     src, 
@@ -25,10 +26,13 @@ const resolve = (pathname) => {
   return path.join(__dirname, '..', pathname);
 };
 
+const router = new KoaRouter();
+
 const getSuffix = (str) => str.slice(str.lastIndexOf("."));
 
 module.exports = {
   downloadImage,
   getSuffix,
-  resolve
+  resolve,
+  router
 };

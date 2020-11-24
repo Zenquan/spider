@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "async": "^3.2.0",
+    "cron": "^1.8.2",
     "koa": "^2.13.0",
     "koa-body": "^4.2.0",
     "koa-router": "^10.0.0",
     "koa-static": "^5.0.0",
     "node-xlsx": "^0.15.0",
+    "nodemailer": "^6.4.16",
     "request": "^2.88.2"
   },
   "devDependencies": {
@@ -22,7 +24,9 @@
     "dev": "nodemon index",
     "staticServer": "pm2 start ./service/staticServer.js",
     "emoji": "node ./service/emoji",
-    "movie": "node ./service/movie"
+    "douban": "node ./service/douban",
+    "zhihu": "node ./service/zhihu",
+    "email": "node ./service/email"
   },
   "keywords": [],
   "author": "",

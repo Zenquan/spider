@@ -1,7 +1,6 @@
-const KoaRouter = require('koa-router');
-const { index } = require('../controller/emoji');
+const { searchJson } = require('../controller/emoji');
+const { router } = require('../util')
 
-const router = new KoaRouter();
-router.get('/emoji', index);
+router.get('/emoji/searchJson', searchJson);
 
 module.exports = router;

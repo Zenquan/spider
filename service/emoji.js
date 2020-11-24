@@ -1,22 +1,22 @@
 const child_process = require( 'child_process');
 const async = require( "async");
 const path = require( 'path');
-const { downloadImage, resolve } = require( '../util/index');
+const { downloadImage, resolve } = require( '../util');
 const config = require( '../constant/config');
 const emoji = require( '../constant/curl/emoji');
 
 const { staticPath  } = config;
-const { curl, baseurl } = emoji;
+const { searchJson, imgBaseurl } = emoji;
 
 const __main__ = () => {
   let result = []
-  child_process.exec(curl, (err, stdout, stderr) => {
+  child_process.exec(searchJson, (err, stdout, stderr) => {
     let arr = JSON.parse(stdout)
     
     arr.forEach(out => {
       result.push({
         title: `${out.path.split('/')[1]}`,
-        url: `${baseurl}${out.path}`
+        url: `${imgBaseurl}${out.path}`
       });
     });
 
