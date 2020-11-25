@@ -1,13 +1,12 @@
-const child_process = require( 'child_process');
 const fs = require('fs');
 const { topstory } = require( '../constant/curl/zhihu');
-const { resolve } = require('../util');
+const { resolve, exec, generNowTime } = require('../util');
 
 const __main__ = () => {
-  child_process.exec(topstory, (err, stdout, stderr) => {
+  exec(topstory, (err, stdout, stderr) => {
     let arr = JSON.stringify(stdout)
     
-    fs.writeFileSync(resolve('/public/zhihu/topstory.json'), arr)
+    fs.writeFileSync(resolve(`/public/zhihu/topstory_${generNowTime()}.json`), arr)
   });
 };
 
