@@ -59,6 +59,15 @@ const generNowTime = () => {
   return `${dayjs(Date.now()).format('YYYY-MM-DD')}`
 }
 
+const mkDir = (dirName) => {
+  let isExsits = fs.existsSync(resolve(dirName));
+  isExsits ? () => {} : fs.mkdirSync(resolve(dirName));
+}
+
+const writeDataFile = (path, data) => {
+  fs.writeFileSync(resolve(path), JSON.stringify(data));
+}
+
 module.exports = {
   downloadImage,
   getSuffix,
@@ -66,5 +75,7 @@ module.exports = {
   router,
   exec,
   clusterFn,
-  generNowTime
+  generNowTime,
+  mkDir,
+  writeDataFile
 };

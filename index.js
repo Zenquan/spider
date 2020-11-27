@@ -10,17 +10,17 @@ const app = new Koa();
 const { staticPath, APIPORT, connectionStr } = config;
 
 // 连接数据库
-mongoose.connect(connectionStr, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}, () => {
-  console.log('数据库连接成功')
-})
-.catch(err => {
-  console.log(err)
-})
+// mongoose.connect(connectionStr, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }, () => {
+//   console.log('数据库连接成功')
+// })
+// .catch(err => {
+//   console.log(err)
+// })
 
-mongoose.connection.on(error, console.error)
+// mongoose.connection.on(error, console.error)
 
 app.use(KoaBody({
   multipart: true,
