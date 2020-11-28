@@ -1,7 +1,10 @@
 const fs = require('fs');
 const { resolve, generNowTime, mkDir, writeDataFile } = require('../util');
-
 class PostStorageCtl {
+  /**
+   * 需要制定一下上传的数据规则
+   * @param {*} ctx 
+   */
   postLocalStorage (ctx){
     const body = ctx.request.body;
     ctx.status = 200;

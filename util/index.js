@@ -8,17 +8,17 @@ const numCPUs = require('os').cpus().length;
 const dayjs = require('dayjs');
 
 const downloadImage = (
-    src, 
+    options, 
     dest, 
     callback
   ) => {
+  const src = options.url;
   request.head(src, (err, res, body) => {
     if (err) {
       console.log(err);
       return;
     }
-    src &&
-      request(src)
+    request(options)
         .pipe(fs.createWriteStream(dest))
         .on("close", () => {
           callback && callback(null, dest);
@@ -68,6 +68,10 @@ const writeDataFile = (path, data) => {
   fs.writeFileSync(resolve(path), JSON.stringify(data));
 }
 
+const isFileExits = (destImage) => {
+  if (fs.existsSync(destImage)) return;
+}
+
 module.exports = {
   downloadImage,
   getSuffix,
@@ -77,5 +81,6 @@ module.exports = {
   clusterFn,
   generNowTime,
   mkDir,
-  writeDataFile
+  writeDataFile,
+  isFileExits
 };

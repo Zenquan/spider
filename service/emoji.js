@@ -24,7 +24,9 @@ const __main__ = () => {
         setTimeout(() => {
           const imgDir = resolve(staticPath),
             destImage = `${imgDir}/img/${item.title}.jpg`
-          downloadImage(item.url, destImage, (err, data) => {
+          downloadImage({
+            url: item.url
+          }, destImage, (err, data) => {
             err ? console.log(err) : console.log(path.resolve(data));
           });
           callback && callback(null, item);
