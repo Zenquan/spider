@@ -1,6 +1,9 @@
 # splider
 
->本项目使用node + koa + request + async 做的一些爬虫，仅用于自己学习程序的接口数据
+>本项目使用node + koa + request + async + mysql做的一些爬虫，仅用于自己学习程序的接口数据
+
+![](http://pic.joyenjoy.tech/img/20201211140908.png)
+
 
 - 表情包网站
   - 推荐表情包
@@ -9,3 +12,6 @@
 - 某乎网
   - 热搜榜
 - 发送邮件脚本
+
+TODO:
+- [ ] 设计数据库，把爬下来的数据存下来。
