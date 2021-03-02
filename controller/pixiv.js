@@ -1,9 +1,9 @@
 const fs = require('fs');
 const { resolve, generNowTime } = require('../util');
 
-class PixiCtl {
+class PixivCtl {
   topIllust (ctx){
-    const movie = fs.readFileSync(resolve(`/public/pixi/topIllust_${generNowTime()}.json`));
+    const movie = fs.readFileSync(resolve(`/public/pixiv/topIllust_${generNowTime()}.json`));
     const tmpMovie = JSON.parse(movie);
     ctx.status = 200;
     ctx.body = {
@@ -14,4 +14,4 @@ class PixiCtl {
   }
 };
 
-module.exports = new PixiCtl();
+module.exports = new PixivCtl();

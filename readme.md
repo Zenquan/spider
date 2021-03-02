@@ -2,7 +2,7 @@
 
 >本项目使用node + koa + request + async + mysql做的一些爬虫，仅用于自己学习程序的接口数据
 
-![](http://pic.joyenjoy.tech/img/20201211140908.png)
+![](https://raw.githubusercontent.com/Zenquan/diagrams/master/img/20201211140908.png)
 
 
 - 表情包网站
@@ -11,6 +11,7 @@
   - 电影首页
 - 某乎网
   - 热搜榜
+- pixiv动漫二次元
 - 发送邮件脚本
 
 TODO:

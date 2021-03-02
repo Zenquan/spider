@@ -3,11 +3,13 @@ const { host, staticPath  } = require('../constant/config');
 
 class EmojiCtl {
   searchJson (ctx){
-    const imgs = fs.readdirSync(`./${staticPath}/img`);
-    let result = imgs.map(img => `${host}/img/${img}`),
+    let page = ctx.request.query.page;
+    const size = 18;
+    const imgs = fs.readdirSync(`./${staticPath}/img/emoji`);
+    let result = imgs.map((img, index) => `http://${host}/img/emoji/${img}`),
       body = {
         "ret": "200",
-        "data": result,
+        "data": page ? result.slice((page - 1) * size, page * size) : result,
         "msg": "success"
       };
     ctx.status = 200;

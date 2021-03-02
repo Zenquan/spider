@@ -35,6 +35,7 @@
     "douban": "node ./service/douban",
     "zhihu": "node ./service/zhihu",
     "email": "node ./service/email",
+    "ixigua": "node ./service/ixigua",
     "emailcron": "node ./schedule/email"
   },
   "keywords": [],

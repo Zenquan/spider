@@ -23,7 +23,7 @@ const __main__ = () => {
       async.mapSeries(result, (item, callback) => {
         setTimeout(() => {
           const imgDir = resolve(staticPath),
-            destImage = `${imgDir}/img/${item.title}.jpg`
+            destImage = `${imgDir}/img/emoji/${item.title}.jpg`
           downloadImage({
             url: item.url
           }, destImage, (err, data) => {
