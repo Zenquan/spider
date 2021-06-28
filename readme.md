@@ -1,4 +1,4 @@
-# splider
+# spider
 
 >本项目使用node + koa + request + async + mysql做的一些爬虫，仅用于自己学习程序的接口数据
 
