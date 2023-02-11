@@ -23,7 +23,7 @@
     "tesseract.js": "^2.1.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.20",
     "pm2": "^4.5.0",
     "serve": "^11.3.2"
   },
